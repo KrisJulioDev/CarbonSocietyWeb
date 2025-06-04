@@ -140,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
+                
+                // Add glow effect for dark theme
+                if (entry.target.classList.contains('feature')) {
+                    entry.target.style.boxShadow = '0 0 30px rgba(0, 102, 204, 0.1)';
+                }
             }
         });
     }, observerOptions);
@@ -149,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(el);
     });
 
@@ -194,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Contact form would open here! This is a placeholder for the actual contact functionality.');
     }
 
-    // Stats Counter Animation
+    // Stats Counter Animation with glowing effect
     function animateStats() {
         const stats = document.querySelectorAll('.stat-number');
         
@@ -203,6 +208,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const suffix = stat.textContent.replace(/[0-9]/g, '');
             let current = 0;
             const increment = target / 50;
+            
+            // Add glow effect
+            stat.style.textShadow = '0 0 10px rgba(0, 102, 204, 0.5)';
+            
             const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
