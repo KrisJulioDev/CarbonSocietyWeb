@@ -64,13 +64,54 @@
   backface-visibility: hidden;
 }
 
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .pixel-card img {
+    transition: transform 0.2s ease;
+  }
+  
+  .pixel-card:active img {
+    transform: scale(1.02);
+  }
+  
+  .pixel-canvas {
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
+  }
+  
+  .pixel-card:active .pixel-canvas {
+    opacity: 0.6;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .pixel-card:hover .pixel-canvas,
+  .pixel-card:focus .pixel-canvas {
+    opacity: 0.3;
+  }
+  
+  .pixel-card:active .pixel-canvas {
+    opacity: 0.8;
+  }
+  
+  .pixel-card:hover img {
+    transform: none;
+  }
+  
+  .pixel-card:active img {
+    transform: scale(1.02);
+  }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .pixel-card img {
     transition: none;
   }
   
-  .pixel-card:hover img {
+  .pixel-card:hover img,
+  .pixel-card:active img {
     transform: none;
   }
   

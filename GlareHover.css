@@ -97,6 +97,49 @@
     width: 120%;
     height: 120%;
   }
+  
+  /* Reduce animation complexity on mobile */
+  .glare-hover {
+    transition: all var(--gh-duration, 400ms) ease;
+  }
+  
+  .glare-hover::before {
+    transition: transform var(--gh-duration, 400ms) ease;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .glare-hover:hover::before {
+    animation: none;
+    transform: translateX(-100%) translateY(-100%) rotate(var(--gh-angle, -45deg));
+  }
+  
+  .glare-hover:active::before {
+    animation: glareAnimation var(--gh-duration, 400ms) ease forwards;
+  }
+  
+  .glare-hover:hover {
+    transform: none;
+    text-shadow: none;
+  }
+  
+  .glare-hover:active {
+    transform: scale(1.02);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .word-highlight.glare-hover:hover {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .word-highlight.glare-hover:active {
+    color: #FFFFFF;
+    background-color: #4F46E5;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+  }
 }
 
 /* Performance optimizations */

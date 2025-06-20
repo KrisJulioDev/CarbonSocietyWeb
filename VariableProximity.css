@@ -44,4 +44,44 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .variable-proximity-letter {
+    transition: font-variation-settings 0.2s ease;
+    will-change: auto;
+  }
+  
+  .variable-proximity-letter:hover {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .variable-proximity-letter {
+    transition: none;
+    will-change: auto;
+  }
+  
+  .variable-proximity-letter:hover {
+    transform: none;
+    transition: none;
+  }
+  
+  .variable-proximity-letter:active {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  .variable-proximity {
+    text-rendering: auto;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
 } 

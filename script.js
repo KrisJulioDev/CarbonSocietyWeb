@@ -76,28 +76,25 @@ function createMobileMenuToggle() {
             mobileToggle = document.createElement('button');
             mobileToggle.className = 'mobile-nav-toggle';
             mobileToggle.innerHTML = '☰';
-            mobileToggle.style.cssText = `
-                position: fixed;
-                top: 1rem;
-                right: 1rem;
-                background: #4F46E5;
-                color: white;
-                border: 2px solid #111111;
-                padding: 0.8rem;
-                font-size: 1rem;
-                cursor: pointer;
-                z-index: 1001;
-                border-radius: 0;
-                font-weight: 700;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            `;
+            mobileToggle.setAttribute('aria-label', 'Toggle navigation menu');
+            mobileToggle.setAttribute('aria-expanded', 'false');
             document.body.appendChild(mobileToggle);
             
             // Add click event
             mobileToggle.addEventListener('click', () => {
-                navSidebar.classList.toggle('active');
-                mobileToggle.innerHTML = navSidebar.classList.contains('active') ? '✕' : '☰';
+                const isActive = navSidebar.classList.toggle('active');
+                mobileToggle.innerHTML = isActive ? '✕' : '☰';
+                mobileToggle.setAttribute('aria-expanded', isActive.toString());
+                
+                // Prevent body scroll when menu is open
+                document.body.style.overflow = isActive ? 'hidden' : '';
             });
+            
+            // Add touch event for better mobile response
+            mobileToggle.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                mobileToggle.click();
+            }, { passive: false });
         }
     } else {
         // Remove mobile toggle on desktop
@@ -106,6 +103,22 @@ function createMobileMenuToggle() {
             mobileToggle.remove();
         }
         navSidebar.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close mobile menu when clicking outside
+function handleOutsideClick(e) {
+    if (window.innerWidth <= 768) {
+        const mobileToggle = document.querySelector('.mobile-nav-toggle');
+        if (navSidebar.classList.contains('active') && 
+            !navSidebar.contains(e.target) && 
+            !mobileToggle.contains(e.target)) {
+            navSidebar.classList.remove('active');
+            mobileToggle.innerHTML = '☰';
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
     }
 }
 
@@ -183,8 +196,21 @@ navLinks.forEach(link => {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
             if (mobileToggle) {
                 mobileToggle.innerHTML = '☰';
+                mobileToggle.setAttribute('aria-expanded', 'false');
             }
+            document.body.style.overflow = '';
         }
+    });
+    
+    // Add touch handling for better mobile experience
+    link.addEventListener('touchstart', (e) => {
+        link.style.backgroundColor = 'rgba(79, 70, 229, 0.1)';
+    });
+    
+    link.addEventListener('touchend', (e) => {
+        setTimeout(() => {
+            link.style.backgroundColor = '';
+        }, 150);
     });
 });
 
@@ -279,6 +305,28 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
             createMobileMenuToggle();
         });
+        
+        // Add touch event listeners for mobile
+        document.addEventListener('click', handleOutsideClick);
+        document.addEventListener('touchstart', handleOutsideClick);
+        
+        // Improve scroll performance on mobile
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateActiveNavLink);
+                ticking = true;
+            }
+        }
+        
+        function updateActiveNavLinkThrottled() {
+            ticking = false;
+            updateActiveNavLink();
+        }
+        
+        // Override the scroll listener with throttled version
+        window.removeEventListener('scroll', updateActiveNavLink);
+        window.addEventListener('scroll', requestTick, { passive: true });
     }, 100);
 });
 
