@@ -1,0 +1,61 @@
+.dot-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dot-grid__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.dot-grid__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+
+/* Navigation specific styling */
+.nav-sidebar {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-sidebar .dot-grid {
+  z-index: 0;
+}
+
+.nav-sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure navigation content and links are above the dot grid */
+.nav-content,
+.nav-links,
+.logo,
+.logo-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Performance optimizations */
+.dot-grid__canvas {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .dot-grid {
+    display: none;
+  }
+} 

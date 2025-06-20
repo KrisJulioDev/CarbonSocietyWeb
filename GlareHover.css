@@ -1,0 +1,120 @@
+.glare-hover {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: var(--gh-width, auto);
+  height: var(--gh-height, auto);
+  background: var(--gh-bg, transparent);
+  border-radius: var(--gh-br, 0);
+  border: 1px solid var(--gh-border, transparent);
+  cursor: pointer;
+  transition: all var(--gh-duration, 650ms) ease;
+}
+
+.glare-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: var(--gh-size, 250%);
+  height: var(--gh-size, 250%);
+  background: linear-gradient(
+    var(--gh-angle, -45deg),
+    transparent 30%,
+    var(--gh-rgba, rgba(255, 255, 255, 0.5)) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(var(--gh-angle, -45deg));
+  transition: transform var(--gh-duration, 650ms) ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glare-hover:hover::before {
+  transform: translateX(100%) translateY(100%) rotate(var(--gh-angle, -45deg));
+}
+
+.glare-hover--play-once:hover::before {
+  animation: glareAnimation var(--gh-duration, 650ms) ease forwards;
+}
+
+.glare-hover--play-once.played::before {
+  animation: none;
+}
+
+@keyframes glareAnimation {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(var(--gh-angle, -45deg));
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(var(--gh-angle, -45deg));
+  }
+}
+
+/* Specific styles for text elements */
+.glare-hover--text {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.glare-hover--text::before {
+  border-radius: inherit;
+}
+
+/* Enhanced glare effect for highlighted text */
+.word-highlight.glare-hover {
+  position: relative;
+  z-index: 2;
+}
+
+.word-highlight.glare-hover::before {
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 130%;
+  background: linear-gradient(
+    var(--gh-angle, -45deg),
+    transparent 20%,
+    var(--gh-rgba, rgba(255, 255, 255, 0.6)) 50%,
+    transparent 80%
+  );
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .glare-hover::before {
+    width: 200%;
+    height: 200%;
+  }
+  
+  .word-highlight.glare-hover::before {
+    width: 120%;
+    height: 120%;
+  }
+}
+
+/* Performance optimizations */
+.glare-hover,
+.glare-hover::before {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Additional effects for enhanced visual impact */
+.glare-hover:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.word-highlight.glare-hover:hover {
+  color: #FFFFFF;
+  background-color: #4F46E5;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+} 

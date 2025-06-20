@@ -1,0 +1,177 @@
+{
+    "designSystemProfile": {
+      "name": "DASH - Bold & Modern Tech",
+      "description": "A design system characterized by bold typography, a vibrant primary color, and a dynamic layout that uses overlapping elements. It balances a clean, grid-based structure with brutalist-inspired, unconventional placements to create an energetic and confident feel.",
+      "overallStyle": {
+        "aesthetic": ["Bold", "Modern", "Brutalist-inspired", "Clean", "Minimalist"],
+        "vibe": "Confident, energetic, and slightly edgy. Aims to be approachable yet professional.",
+        "layoutApproach": "Asymmetrical layout with overlapping elements on a structured grid base. Uses generous whitespace to let bold elements breathe."
+      },
+      "colorPalette": {
+        "primary": {
+          "name": "Vibrant Purple",
+          "hex": "#4F46E5",
+          "usage": "Used for primary call-to-action buttons, key headings, links, and decorative graphic elements to draw attention."
+        },
+        "text": {
+          "primary": {
+            "name": "Black",
+            "hex": "#111111",
+            "usage": "Used for all major headings and body copy for high contrast and readability."
+          },
+          "onPrimary": {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "usage": "Text color for elements with a primary purple background, like buttons."
+          }
+        },
+        "background": {
+          "light": {
+            "name": "Off-White/Beige",
+            "hex": "#F5F1EC",
+            "usage": "Main background color for the light theme, providing a warm, soft canvas."
+          }
+        },
+        "ui": {
+          "darkSurface": {
+            "name": "Dark Gray",
+            "hex": "#212121",
+            "usage": "Background for persistent UI elements like the sidebar navigation."
+          },
+          "lightText": {
+            "name": "Light Gray",
+            "hex": "#E0E0E0",
+            "usage": "Text color for UI elements on dark surfaces."
+          },
+          "subtleBorders": {
+            "name": "Medium Gray",
+            "hex": "#CCCCCC",
+            "usage": "Borders for UI elements and grid lines."
+          }
+        }
+      },
+      "typography": {
+        "heading": {
+          "fontFamily": "A bold, heavy-weight, extended sans-serif font (e.g., 'Neue Haas Grotesk Display Pro', 'Inter Black', 'Monument Extended').",
+          "fontWeight": "900 (Black)",
+          "style": {
+            "h1": {
+              "fontSize": "Very Large (e.g., 6-10rem)",
+              "lineHeight": "1.0",
+              "letterSpacing": "Tight (-0.02em)",
+              "textTransform": "Uppercase",
+              "notes": "Often breaks into multiple lines. Can have words highlighted with a solid color block background."
+            },
+            "h2": {
+              "fontSize": "Large (e.g., 3-5rem)",
+              "lineHeight": "1.1",
+              "letterSpacing": "Normal",
+              "textTransform": "Sentence case or Uppercase",
+              "notes": "Used for section titles."
+            }
+          }
+        },
+        "subheading": {
+          "fontFamily": "Same sans-serif family as headings.",
+          "fontWeight": "700 (Bold)",
+          "fontSize": "Small to Medium (e.g., 1-1.2rem)",
+          "textTransform": "Uppercase",
+          "color": "primary",
+          "notes": "Often used as a label for a section, e.g., 'THIS IS DASH'."
+        },
+        "body": {
+          "fontFamily": "A clean, readable sans-serif font (e.g., 'Inter', 'Work Sans').",
+          "fontWeight": "400 (Regular)",
+          "fontSize": "Medium (e.g., 1.1rem - 1.25rem)",
+          "lineHeight": "1.6",
+          "color": "text.primary"
+        },
+        "link": {
+          "style": "Underlined",
+          "color": "primary",
+          "fontWeight": "500 (Medium)",
+          "textDecoration": "underline"
+        }
+      },
+      "layout": {
+        "gridSystem": {
+          "type": "Single column for main content with a fixed sidebar.",
+          "background": "A subtle, thin grid pattern is visible on the main background."
+        },
+        "spacing": {
+          "unit": "rem",
+          "scale": "Large scale, with significant vertical padding between sections (e.g., 8-12rem) to create clear separation and focus.",
+          "intraSection": "Tighter spacing within components and text blocks."
+        },
+        "sectioning": {
+          "style": "Page is divided into distinct, full-width sections.",
+          "markers": "Sections are often preceded by a numerical indicator (e.g., '01', '02') and a subheading in the primary color, creating a clear narrative flow."
+        },
+        "composition": {
+          "overlappingElements": {
+            "enabled": true,
+            "description": "A key feature of the design. Images, text blocks, and decorative shapes frequently overlap each other, creating depth and a dynamic, collage-like effect.",
+            "notes": "Images are often placed behind or on top of large heading text."
+          }
+        }
+      },
+      "components": {
+        "navigation": {
+          "type": "Fixed Vertical Sidebar",
+          "position": "Right",
+          "backgroundColor": "ui.darkSurface",
+          "typography": {
+            "fontFamily": "Same sans-serif as body.",
+            "fontWeight": "700 (Bold)",
+            "fontSize": "Medium (e.g., 1rem)",
+            "textTransform": "Uppercase",
+            "color": "ui.lightText"
+          },
+          "activeState": "Indicated by a solid circular dot (in ui.lightText color) next to the link.",
+          "items": ["Dashboard Title", "Navigation Links", "Theme Switcher (Light/Dark)"]
+        },
+        "buttons": {
+          "primary": {
+            "shape": "Rectangle",
+            "borderRadius": "0px",
+            "backgroundColor": "primary",
+            "padding": "Generous (e.g., 1rem 2.5rem)",
+            "typography": {
+              "fontFamily": "Same sans-serif as headings.",
+              "fontWeight": "700 (Bold)",
+              "fontSize": "Medium (e.g., 1rem)",
+              "color": "text.onPrimary",
+              "textTransform": "Uppercase"
+            },
+            "hoverEffect": "Subtle change in brightness or scale."
+          }
+        },
+        "logo": {
+          "style": "Blocky, two-line wordmark ('DA' on top, 'SH' on bottom).",
+          "fontFamily": "Heavy, condensed sans-serif.",
+          "container": "Contained within a solid black square.",
+          "position": "Top center or within the navigation."
+        },
+        "decorativeElements": {
+          "geometricShapes": {
+            "type": "Chevron/Arrow pattern",
+            "color": "primary",
+            "usage": "Used as a large, dynamic background element to break up sections."
+          },
+          "accentSymbols": {
+            "type": "Asterisk (*), circular dot (●)",
+            "usage": "Used sparingly next to headings or as separators to add visual interest."
+          }
+        }
+      },
+      "imagery": {
+        "style": "High-quality, professional photography of people in a modern office environment.",
+        "colorGrade": "Natural with a slightly warm, desaturated look. Consistent toning across all images.",
+        "treatment": {
+          "framing": "Rectangular crops, no rounded corners.",
+          "composition": "Used as collage elements. Images are layered on top of each other, often with a slight, non-uniform rotation and a thin border to create a stacked-photos effect.",
+          "interactionWithLayout": "Frequently overlaps with text, background shapes, and other UI elements to create a dynamic, integrated feel."
+        }
+      }
+    }
+  }

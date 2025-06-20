@@ -1,0 +1,80 @@
+.pixel-card {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.pixel-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pixel-card:hover .pixel-canvas,
+.pixel-card:focus .pixel-canvas {
+  opacity: 1;
+}
+
+/* Image container styles */
+.pixel-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pixel-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Specific styles for different image containers */
+.hero-image.pixel-card {
+  border-radius: 0;
+}
+
+.stacked-image.pixel-card {
+  border-radius: 0;
+}
+
+.project-image.pixel-card {
+  border-radius: 0;
+}
+
+/* Enhanced focus styles for accessibility */
+.pixel-card:focus {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
+.pixel-card:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Performance optimizations */
+.pixel-card,
+.pixel-canvas {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-card img {
+    transition: none;
+  }
+  
+  .pixel-card:hover img {
+    transform: none;
+  }
+  
+  .pixel-canvas {
+    transition: none;
+  }
+} 

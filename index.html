@@ -3,579 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
-    <title>CarbonSociety - The Ultimate Car Club Organizer</title>
-    <meta name="description" content="Organize car meets, track events, and build your automotive community with CarbonSociety - the premier car club management platform.">
+    <title>DASH - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="GlareHover.css">
+    <link rel="stylesheet" href="VariableProximity.css">
+    <link rel="stylesheet" href="PixelCard.css">
+    <link rel="stylesheet" href="CircularText.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-car"></i>
-                <span>CarbonSociety</span>
+<body>
+    <!-- Background Grid -->
+    <div class="grid-background"></div>
+    
+    <!-- Navigation Sidebar -->
+    <nav class="nav-sidebar">
+        <div class="nav-content">
+            <!-- Header -->
+            <div class="logo">
+                <div class="logo-text">
+                    <span class="logo-line">DASHBOARD</span> 
+                </div>
             </div>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="cta-button">Get Started</button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
+                <li><a href="#works" class="nav-link" data-section="works">WORKS</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">CONTACT</a></li>
+            </ul> 
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>The Ultimate Car Club Organizer</h1>
-                    <p class="hero-subtitle">Build, manage, and grow your automotive community with CarbonSociety. From local meets to track days, we've got everything you need to organize unforgettable car events.</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">120%</span>
-                            <span class="stat-label">Average Growth</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">10K+</span>
-                            <span class="stat-label">Active Members</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Events Monthly</span>
-                        </div>
-                    </div>
-                    <div class="hero-cta">
-                        <button class="cta-button primary">Get Started</button>
-                        <button class="cta-button secondary">Watch Demo</button>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="dashboard-mockup">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mockup-sidebar">
-                                <div class="sidebar-item active">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                    <span>Dashboard</span>
-                                </div>
-                                <div class="sidebar-item">
-                                    <i class="fas fa-calendar"></i>
-                                    <span>Events</span>
-                                </div>
-                                <div class="sidebar-item">
-                                    <i class="fas fa-users"></i>
-                                    <span>Members</span>
-                                </div>
-                                <div class="sidebar-item">
-                                    <i class="fas fa-car"></i>
-                                    <span>Garage</span>
-                                </div>
-                            </div>
-                            <div class="mockup-main">
-                                <div class="event-card">
-                                    <div class="event-info">
-                                        <h4>Weekend Canyon Run</h4>
-                                        <p>This Saturday • 8:00 AM</p>
-                                        <span class="event-attendees">24 attending</span>
-                                    </div>
-                                </div>
-                                <div class="event-card">
-                                    <div class="event-info">
-                                        <h4>Track Day @ Laguna Seca</h4>
-                                        <p>Next Sunday • 7:00 AM</p>
-                                        <span class="event-attendees">12 attending</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <div class="problem-content">
-                <h2>Is organizing car events driving you crazy?</h2>
-                <p>We know managing a car club shouldn't be this complicated. CarbonSociety streamlines everything from member management to event coordination — helping you focus on what matters: the cars and the community.</p>
-                <div class="problem-points">
-                    <div class="problem-point">
-                        <i class="fas fa-times"></i>
-                        <span>No more scattered group chats and lost messages</span>
-                    </div>
-                    <div class="problem-point">
-                        <i class="fas fa-times"></i>
-                        <span>Stop manually tracking RSVPs and attendance</span>
-                    </div>
-                    <div class="problem-point">
-                        <i class="fas fa-times"></i>
-                        <span>End the chaos of unorganized meet schedules</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Take control of your car club with CarbonSociety</h2>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section home-section active">
+            <div class="section-number">01</div>
+            <div class="section-label">JULIO STUDIO</div>
             
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-route"></i>
+            <div class="home-content">
+                <div class="home-grid">
+                    <div> 
+                    <h1 class="main-heading">
+                        <span class="heading-word">
+                            <span class="word-highlight">CREATIVE</span> TECH
+                        </span>
+                        <span class="heading-word">PORTFOLIO</span>
+                    </h1> 
+                    
+                    <div class="home-description">
+                        <p>A multi-disciplinary developer focusing on creating creative and functional digital experience, focusing on iOS development and UI/UX design.</p>
                     </div>
-                    <h3>Smart Event Planning</h3>
-                    <h4>Effortless organization</h4>
-                    <p>Create and manage car meets, track days, and road trips with our intuitive event planning tools. Set routes, manage RSVPs, and coordinate with ease.</p>
-                    <ul class="feature-list">
-                        <li>Route Planning & GPS Integration</li>
-                        <li>Automated RSVP Management</li>
-                        <li>Weather & Traffic Updates</li>
-                    </ul>
-                </div>
 
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-users-cog"></i>
                     </div>
-                    <h3>Member Management</h3>
-                    <h4>Build your community</h4>
-                    <p>Keep track of your club members, their cars, and their participation. Create member profiles, track attendance, and build a stronger community.</p>
-                    <ul class="feature-list">
-                        <li>Member Profiles & Car Garage</li>
-                        <li>Attendance Tracking</li>
-                        <li>Club Achievements & Badges</li>
-                    </ul>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Analytics & Insights</h3>
-                    <h4>Know your community</h4>
-                    <p>Get detailed insights into your club's activity, popular events, and member engagement. Make data-driven decisions to grow your community.</p>
-                    <ul class="feature-list">
-                        <li>Event Performance Metrics</li>
-                        <li>Member Engagement Analytics</li>
-                        <li>Growth Tracking Dashboard</li>
-                    </ul>
-                </div>
-
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile-First Design</h3>
-                    <h4>Manage on the go</h4>
-                    <p>Access your club from anywhere with our responsive design. Check event details, communicate with members, and manage your club while on the road.</p>
-                    <ul class="feature-list">
-                        <li>iOS & Android Optimized</li>
-                        <li>Real-time Notifications</li>
-                        <li>Offline Event Access</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dashboard Showcase -->
-    <section class="dashboard-showcase">
-        <div class="container">
-            <h2>Everything you need in one dashboard</h2>
-            <p>CarbonSociety provides a comprehensive view of your club's activity, member stats, upcoming events, and community engagement — all in one beautiful interface.</p>
-            
-            <div class="dashboard-preview">
-                <div class="dashboard-tabs">
-                    <button class="tab-button active" data-tab="events">Events Dashboard</button>
-                    <button class="tab-button" data-tab="members">Member Management</button>
-                    <button class="tab-button" data-tab="analytics">Analytics</button>
+                    <!-- Hero Image positioned to the right -->
+                    <div class="hero-image">
+                        <img src="assets/hero_image.png" alt="Hero Image" class="hero-img">
+                    </div> 
                 </div>
                 
-                <div class="tab-content active" id="events">
-                    <div class="dashboard-mockup-large">
-                        <div class="dashboard-header">
-                            <h3>Upcoming Events</h3>
-                            <button class="add-event-btn">+ New Event</button>
-                        </div>
-                        <div class="events-list">
-                            <div class="event-item">
-                                <div class="event-date">
-                                    <span class="day">15</span>
-                                    <span class="month">MAR</span>
-                                </div>
-                                <div class="event-details">
-                                    <h4>Spring Meet & Greet</h4>
-                                    <p>Central Park Parking Lot • 10:00 AM</p>
-                                    <div class="event-meta">
-                                        <span class="attendees">32 attending</span>
-                                        <span class="event-type">Social</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-date">
-                                    <span class="day">22</span>
-                                    <span class="month">MAR</span>
-                                </div>
-                                <div class="event-details">
-                                    <h4>Track Day @ Willow Springs</h4>
-                                    <p>Willow Springs Raceway • 7:00 AM</p>
-                                    <div class="event-meta">
-                                        <span class="attendees">18 attending</span>
-                                        <span class="event-type">Track</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="members">
-                    <div class="dashboard-mockup-large">
-                        <div class="dashboard-header">
-                            <h3>Club Members</h3>
-                            <div class="member-stats">
-                                <span>Active: 145</span>
-                                <span>New this month: 12</span>
-                            </div>
-                        </div>
-                        <div class="members-grid">
-                            <div class="member-card">
-                                <div class="member-avatar"></div>
-                                <h4>Alex Rodriguez</h4>
-                                <p>2023 BMW M3</p>
-                                <span class="member-badge">Active</span>
-                            </div>
-                            <div class="member-card">
-                                <div class="member-avatar"></div>
-                                <h4>Sarah Chen</h4>
-                                <p>2022 Porsche 911</p>
-                                <span class="member-badge">VIP</span>
-                            </div>
-                            <div class="member-card">
-                                <div class="member-avatar"></div>
-                                <h4>Mike Johnson</h4>
-                                <p>2021 Toyota Supra</p>
-                                <span class="member-badge">New</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="analytics">
-                    <div class="dashboard-mockup-large">
-                        <div class="dashboard-header">
-                            <h3>Club Analytics</h3>
-                        </div>
-                        <div class="analytics-grid">
-                            <div class="metric-card">
-                                <h4>Event Attendance</h4>
-                                <div class="metric-value">87%</div>
-                                <div class="metric-trend">+5% this month</div>
-                            </div>
-                            <div class="metric-card">
-                                <h4>Active Members</h4>
-                                <div class="metric-value">145</div>
-                                <div class="metric-trend">+12 new members</div>
-                            </div>
-                            <div class="metric-card">
-                                <h4>Events This Month</h4>
-                                <div class="metric-value">8</div>
-                                <div class="metric-trend">2 more than last month</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2>What car club organizers are saying</h2>
-            <p>Real organizers. Real clubs. Real success. All thanks to CarbonSociety.</p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"CarbonSociety transformed how we organize our weekly meets. What used to take hours of coordination now happens automatically. Our attendance has increased by 40%!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Marcus Thompson</h4>
-                            <p>Founder, Bay Area JDM Club</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"The member management features are incredible. I can finally keep track of everyone's cars, attendance, and preferences in one place. Game changer!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Jessica Liu</h4>
-                            <p>President, SoCal Porsche Society</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"Our track day organization went from chaotic to seamless. The event planning tools and automated RSVPs saved us countless hours."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Ryan Mitchell</h4>
-                            <p>Track Coordinator, Northeast BMW Club</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2>Choose your plan</h2>
-            <p>Plans designed for clubs of every size — from local meetups to large automotive communities.</p>
-            
-            <div class="pricing-toggle">
-                <span>Monthly</span>
-                <button class="toggle-switch">
-                    <span class="toggle-slider"></span>
-                </button>
-                <span>Yearly <span class="discount">Save 20%</span></span>
+                <button class="primary-btn">VIEW MY WORK</button>
             </div>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">29</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p>Perfect for small local clubs getting started</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i>Up to 50 members</li>
-                        <li><i class="fas fa-check"></i>5 events per month</li>
-                        <li><i class="fas fa-check"></i>Basic event management</li>
-                        <li><i class="fas fa-check"></i>Member profiles</li>
-                        <li><i class="fas fa-check"></i>Mobile app access</li>
-                    </ul>
-                    <button class="plan-button">Get Started</button>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Pro</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">79</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p>For growing clubs that want advanced features</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i>Up to 200 members</li>
-                        <li><i class="fas fa-check"></i>Unlimited events</li>
-                        <li><i class="fas fa-check"></i>Advanced analytics</li>
-                        <li><i class="fas fa-check"></i>Custom branding</li>
-                        <li><i class="fas fa-check"></i>Route planning</li>
-                        <li><i class="fas fa-check"></i>Priority support</li>
-                    </ul>
-                    <button class="plan-button primary">Get Started</button>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">
-                        <span class="currency">$</span>
-                        <span class="amount">199</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <p>For large clubs and automotive organizations</p>
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i>Unlimited members</li>
-                        <li><i class="fas fa-check"></i>Multi-chapter support</li>
-                        <li><i class="fas fa-check"></i>Advanced integrations</li>
-                        <li><i class="fas fa-check"></i>Custom features</li>
-                        <li><i class="fas fa-check"></i>Dedicated support</li>
-                        <li><i class="fas fa-check"></i>White-label options</li>
-                    </ul>
-                    <button class="plan-button">Contact Sales</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <p>Find answers to common questions about CarbonSociety and how it can benefit your car club.</p>
+            <!-- Decorative Chevron -->
+            <div class="decorative-chevron"></div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-number">02</div>
+            <div class="section-label">ABOUT ME</div>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>What is CarbonSociety?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>CarbonSociety is a comprehensive car club management platform that helps organizers plan events, manage members, and build stronger automotive communities. From local meets to track days, we provide all the tools you need to run a successful car club.</p>
-                    </div>
-                </div>
+            <div class="about-content">
+                <h2 class="section-heading">PASSIONATE DEVELOPER & OCCASIONAL DESIGNER</h2>  
                 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How do I create my first event?</h4>
-                        <i class="fas fa-plus"></i>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>With 14+ years of software development experience, I specialize in building digital products that are both visually engaging and technically robust.</p>
+                        
+                        <p>Blending bold design with modern development practices, I strive to create exceptional user experiences — turning ideas into impactful, real-world applications.</p>
+                        
+                        <div class="skills-list">
+                            <div class="skill-item">iOS Development (UIKit / SwiftUI)</div>
+                            <div class="skill-item">UI/UX Design</div>
+                            <div class="skill-item">Flutter</div>
+                            <div class="skill-item">Game Development</div>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>Creating events is simple! Just log into your dashboard, click "New Event," fill in the details like date, time, and location, and invite your members. Our system handles RSVPs, notifications, and attendance tracking automatically.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Can I cancel my subscription anytime?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! You can cancel your subscription at any time with no penalties. Your club data will remain accessible until the end of your billing period, and you can reactivate whenever you're ready.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Is there a mobile app?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! CarbonSociety is fully responsive and works perfectly on mobile devices. We also have native iOS and Android apps in development that will be available soon.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How does member management work?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Our member management system lets you track member profiles, their cars, attendance history, and engagement levels. Members can update their own profiles and car information, while you maintain control over club settings and permissions.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Can I import my existing member list?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! We provide easy import tools for common formats like CSV and Excel. Our support team can also help you migrate from other platforms to ensure a smooth transition.</p>
+                    
+                    <div class="about-images">
+                        <div class="image-stack">
+                            <div class="stacked-image image-1">
+                                <img src="assets/workspace-2.png" alt="Hero Image" class="hero-img-2">
+                            </div> 
+                            <div class="stacked-image image-2">
+                                <img src="assets/workspace.png" alt="Hero Image" class="hero-img-2">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to revolutionize your car club?</h2>
-                <p>Join hundreds of clubs already using CarbonSociety to build stronger automotive communities.</p>
-                <div class="cta-buttons">
-                    <button class="cta-button primary large">Start Your Free Trial</button>
-                    <button class="cta-button secondary large">Schedule Demo</button>
-                </div>
-                <p class="cta-note">No credit card required • 14-day free trial • Cancel anytime</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-car"></i>
-                        <span>CarbonSociety</span>
-                    </div>
-                    <p>The ultimate platform for car club organizers. Build, manage, and grow your automotive community with ease.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#">Demo</a></li>
-                        <li><a href="#">API</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Status</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> hello@carbonsociety.com</p>
-                    <p><i class="fas fa-phone"></i> 1-800-CARBON-1</p>
-                    <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
-                </div>
-            </div>
+        </section>
+        
+        <!-- Works Section -->
+        <section id="works" class="section works-section">
+            <div class="section-number">03</div>
+            <div class="section-label">SELECTED WORKS</div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2025 CarbonSociety. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+            <div class="works-content">
+                <h2 class="section-heading">FEATURED PROJECTS</h2>
+                
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-image"> 
+                            <a href="https://apps.apple.com/us/app/civil-service-reviewer-with-ai/id6673896209" target="_blank">
+                                <img src="assets/cse_image.png" alt="Hero Image" class="hero-img">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">CIVIL SERVICE REVIEWER</h3>
+                            <p class="project-description">A Gamified quiz and review app for Civil Service Examinees. Studying is boring, so we made it fun and engaging.</p>
+                            <div class="project-tags">
+                                <span class="tag">SWIFTUI</span>
+                                <span class="tag">FIREBASE</span>
+                                <span class="tag">DESIGN UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-image"> 
+                            <a href="https://apps.apple.com/us/app/carbon-society-car-clubs/id6746688686" target="_blank">
+                                <img src="assets/carbon.png" alt="Hero Image" class="hero-img">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">CARBON SOCIETY</h3>
+                            <p class="project-description">Car Event and Club Organizer App. A platform for car enthusiasts to connect, share events, and organize car clubs.</p>
+                            <div class="project-tags">
+                                <span class="tag">SWIFTUI</span>
+                                <span class="tag">FLUTTER</span>
+                                <span class="tag">FIREBASE</span>
+                                <span class="tag">CORE LOCATION</span>
+                                <span class="tag">DESIGN UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://apps.apple.com/us/app/blur-license-plates/id1638244749" target="_blank">
+                                <img src="assets/blur.png" alt="Hero Image" class="hero-img">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">BLUR LICENSE PLATE</h3>
+                            <p class="project-description">Blur license plates automatically with our powerful app. Safeguard sensitive information with ease and maintain privacy like never before.</p>
+                            <div class="project-tags">
+                                <span class="tag">UIKIT</span> 
+                                <span class="tag">CORE GRAPHICS</span>
+                                <span class="tag">DESIGN UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-number">04</div>
+            <div class="section-label">GET IN TOUCH</div>
+            
+            <div class="contact-content">
+                <h2 class="section-heading">LET'S WORK TOGETHER</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-description">Ready to bring your ideas to life? Let's discuss your next project and create something exceptional together.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-label">EMAIL</span>
+                                <a href="mailto:krisgamedev@gmail.com" class="contact-link">krisgamedev@gmail.com</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-label">PHONE</span>
+                                <a href="tel:+1234567890" class="contact-link">+63 (998) 538-6947</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-label">LOCATION</span>
+                                <span class="contact-text">Ortigas Pasig, Manila, PH</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/krisjuliodev/" class="social-link">LINKEDIN</a> 
+                            <a href="https://github.com/KrisJulioDev" class="social-link">GITHUB</a>
+                            <a href="https://www.instagram.com/kris.julio/" class="social-link">INSTAGRAM</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="YOUR EMAIL" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="PROJECT TYPE" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="TELL ME ABOUT YOUR PROJECT" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="primary-btn">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+          </main>
+      
+      <script src="GlareHover.js"></script>
+      <script src="VariableProximity.js"></script>
+      <script src="PixelCard.js"></script>
+      <script src="CircularText.js"></script>
+      <script src="script.js"></script>
+  </body>
 </html> 

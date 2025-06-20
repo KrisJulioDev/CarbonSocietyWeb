@@ -1,0 +1,47 @@
+.variable-proximity {
+  display: inline;
+  position: relative;
+}
+
+.variable-proximity-letter {
+  display: inline-block;
+  transition: font-variation-settings 0.1s ease;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+  will-change: font-variation-settings;
+}
+
+.variable-proximity-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.variable-proximity-space {
+  display: inline-block;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced letter animations */
+.variable-proximity-letter:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease, font-variation-settings 0.1s ease;
+}
+
+/* Ensure proper font rendering */
+.variable-proximity {
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
