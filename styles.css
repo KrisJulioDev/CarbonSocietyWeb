@@ -126,8 +126,7 @@ body {
 
 .nav-link.active {
     color: #4F46E5;
-    font-weight: 800;
-    background-color: rgba(79, 70, 229, 0.1);
+    font-weight: 800; 
     border-radius: 4px;
     transform: translateX(2px);
     transition: all 0.3s ease;
