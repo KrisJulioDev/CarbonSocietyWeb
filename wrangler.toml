@@ -2,4 +2,4 @@ name = "carbon-society-web"
 compatibility_date = "2025-06-25"
 
 [site]
-bucket = "."
+bucket = "."  # This points to the root, where index.html is
