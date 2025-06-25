@@ -1,3 +1,5 @@
 name = "carbon-society-web"
 compatibility_date = "2025-06-25"
-main = "src/index.html" # Update this to the correct path
+
+[site]
+bucket = "."
