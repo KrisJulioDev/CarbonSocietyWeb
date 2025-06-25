@@ -2,9 +2,5 @@ name = "carbon-society-web"
 compatibility_date = "2025-06-25"
 type = "javascript"  # Force no Worker bundling
 
-[site]
-bucket = "."
-entry-point = "."  # ✅ Prevents 'workers-site/index.js' lookup
-
 [assets]
 directory = "./assets"
