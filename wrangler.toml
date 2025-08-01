@@ -1,0 +1,6 @@
+name = "carbon-society-web"
+compatibility_date = "2025-06-25"
+type = "javascript"  # Force no Worker bundling
+
+[assets]
+directory = "./assets"
