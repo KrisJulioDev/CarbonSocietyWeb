@@ -1027,6 +1027,169 @@ body {
 }
 
 /* Touch-friendly interactions */
+/* Legal Pages Styles */
+.legal-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F5F1EC;
+    border-bottom: 2px solid #111111;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-to-portfolio {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4F46E5;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.back-to-portfolio:hover {
+    color: #3730A3;
+}
+
+.legal-brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.legal-main {
+    margin-right: 0;
+    padding-top: 6rem;
+}
+
+.legal-section {
+    padding: 4rem 4rem 8rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-content h1 {
+    margin-bottom: 3rem;
+}
+
+.legal-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.legal-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #111111;
+    margin: 3rem 0 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legal-text h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #111111;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legal-text p {
+    margin-bottom: 1.5rem;
+}
+
+.legal-text ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.legal-text li {
+    margin-bottom: 0.75rem;
+}
+
+.legal-text strong {
+    font-weight: 700;
+    color: #111111;
+}
+
+.contact-info {
+    margin: 4rem 0 2rem;
+    padding: 2rem;
+    background-color: rgba(79, 70, 229, 0.05);
+    border: 2px solid #4F46E5;
+    border-radius: 0;
+}
+
+.contact-info p {
+    font-weight: 600;
+    color: #111111;
+    margin: 0;
+}
+
+.back-link {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.back-link a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #111111;
+    color: #E0E0E0;
+    padding: 2rem 4rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #4F46E5;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    color: #999999;
+    margin: 0;
+}
+
 @media (hover: none) and (pointer: coarse) {
     .primary-btn:hover,
     .nav-link:hover,
