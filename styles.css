@@ -11,11 +11,15 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #F5F1EC;
-    color: #111111;
-    line-height: 1.6;
+    color: #1a1a1a;
+    line-height: 1.7;
     overflow-x: hidden;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Background Grid */
@@ -77,12 +81,12 @@ body {
 
 .logo-line {
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     color: #E0E0E0;
-    line-height: 1;
+    line-height: 1.2;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 .nav-collapse-icon {
@@ -106,18 +110,18 @@ body {
 }
 
 .nav-link {
-    color: #111111;
+    color: #2d2d2d;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
+    padding: 0.6rem 0;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
@@ -126,7 +130,7 @@ body {
 
 .nav-link.active {
     color: #4F46E5;
-    font-weight: 800; 
+    font-weight: 700; 
     border-radius: 4px;
     transform: translateX(2px);
     transition: all 0.3s ease;
@@ -272,19 +276,20 @@ body {
     top: 3rem;
     left: 4rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     color: #4F46E5;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .section-label {
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
     color: #4F46E5;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     margin-bottom: 3rem;
     text-align: left;
     display: flex;
@@ -292,16 +297,18 @@ body {
     align-items: center;
 }
 
-/* Typography */
+/* Enhanced Typography */
 .main-heading {  
     position: relative;
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: clamp(4rem, 8vw, 10rem);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    font-weight: 800;
+    font-size: clamp(3.5rem, 8vw, 9rem);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
     text-transform: uppercase;
-    margin-bottom: 3rem; 
+    margin-bottom: 3rem;
+    color: #1a1a1a;
+    font-variation-settings: 'wght' 800;
 }
 
 /* Split Text Animation Styles */
@@ -383,8 +390,9 @@ body {
 .word-highlight {
     background-color: #4F46E5;
     color: #4F46E5;
-    padding: 4 1rem;
+    padding: 0.1em 0.8em;
     display: inline-block;
+    margin: 0 0.1em;
 }
 
 /* Specific styling for DEVELOPER text */
@@ -396,31 +404,33 @@ body {
 
 .section-heading {
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     line-height: 1.1;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     text-transform: uppercase;
     margin-bottom: 4rem;
-    font-variation-settings: 'wght' 900, 'wdth' 100;
+    color: #1a1a1a;
+    font-variation-settings: 'wght' 700;
     font-feature-settings: "kern" 1, "liga" 1;
     text-rendering: optimizeLegibility;
 }
 
-/* Buttons */
+/* Enhanced Button Typography */
 .primary-btn {
     background-color: #4F46E5;
     color: #FFFFFF;
     border: none;
-    padding: 1rem 2.5rem;
+    padding: 1.1rem 2.8rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 0;
+    line-height: 1.2;
 }
 
 .primary-btn:hover {
@@ -458,11 +468,14 @@ body {
     font-weight: 300;
 }
 
+/* Enhanced Home Section Typography */
 .home-description {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 3rem;
-    max-width: 80%;
+    max-width: 85%;
+    color: #333333;
+    font-weight: 400;
 }
   
 .hero-image {
@@ -518,11 +531,63 @@ body {
     align-items: start;
 }
 
+/* Enhanced About Section Typography */
 .about-text p {
     padding-top: 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
     margin-bottom: 2rem;
+    color: #333333;
+    font-weight: 400;
+}
+
+/* Skills Grid - Adding Missing Styles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.skill-category h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #4F46E5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4F46E5;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    padding: 0.5rem 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background-color: rgba(79, 70, 229, 0.15);
+    border-color: rgba(79, 70, 229, 0.3);
+    transform: translateY(-1px);
 }
 
 .skills-list {
@@ -530,13 +595,14 @@ body {
 }
 
 .skill-item {
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 1rem;
+    color: #333333;
 }
 
 .image-stack { 
@@ -604,20 +670,100 @@ body {
     border: 3px solid #FFFFFF;
 }
 
+/* Enhanced Works Section Typography */
 .project-title {
     font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    line-height: 1.2;
-    color: #212121;
+    line-height: 1.3;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+}
+
+.project-header {
+    margin-bottom: 2rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+.meta-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-challenge,
+.project-solution,
+.project-impact {
+    margin-bottom: 2rem;
+}
+
+.project-challenge h4,
+.project-solution h4,
+.project-impact h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #4F46E5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+}
+
+.project-challenge p,
+.project-solution p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    font-weight: 400;
+}
+
+.project-impact ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-impact li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-weight: 400;
+}
+
+.project-impact li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #4F46E5;
+    font-weight: 700;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
 }
 
 .project-description {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    color: #333333;
+    font-weight: 400;
 }
 
 .project-tags {
@@ -629,13 +775,15 @@ body {
     background-color: #4F46E5;
     color: #FFFFFF;
     padding: 0.5rem 1rem;
-    font-weight: 700;
-    font-size: 0.8rem;
+    font-weight: 600;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Contact Section */
+/* Enhanced Contact Section Typography */
 .contact-grid {
     padding-top: 50px;
     display: grid;
@@ -643,10 +791,13 @@ body {
     gap: 6rem;
 }
 
+/* Enhanced Contact Section Typography */
 .contact-description {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 3rem;
+    color: #333333;
+    font-weight: 400;
 }
 
 .contact-details {
@@ -660,26 +811,31 @@ body {
 .contact-label {
     display: block;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     color: #4F46E5;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 
 .contact-link {
     color: #4F46E5;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(79, 70, 229, 0.3);
 }
 
 .contact-link:hover {
     color: #3730A3;
+    border-bottom-color: #3730A3;
 }
 
 .contact-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    color: #333333;
+    font-weight: 400;
 }
 
 .social-links {
@@ -689,15 +845,19 @@ body {
 
 .social-link {
     color: #4F46E5;
-    text-decoration: underline;
-    font-weight: 500;
-    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(79, 70, 229, 0.3);
+    padding-bottom: 2px;
 }
 
 .social-link:hover {
     color: #3730A3;
+    border-bottom-color: #3730A3;
 }
 
 /* Contact Form */
@@ -708,15 +868,17 @@ body {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
     border: 2px solid #CCCCCC;
     background-color: transparent;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 0;
+    transition: border-color 0.2s ease;
+    color: #333333;
 }
 
 .form-group input:focus,
@@ -727,9 +889,10 @@ body {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #666666;
+    color: #888888;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    font-weight: 400;
 }
 
 /* Mobile Navigation Toggle Button */
@@ -837,15 +1000,32 @@ body {
     }
     
     .main-heading {
-        font-size: 3.5rem;
-        line-height: 1.1;
+        font-size: 3.2rem;
+        line-height: 1.05;
         margin-bottom: 2rem;
+        font-weight: 700;
     }
     
     .section-heading {
-        font-size: 2.8rem;
-        line-height: 1.2;
+        font-size: 2.5rem;
+        line-height: 1.15;
         margin-bottom: 2rem;
+        font-weight: 600;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skill-category h4 {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.7rem;
     }
     
     .home-content {
@@ -989,13 +1169,20 @@ body {
     }
     
     .main-heading {
-        font-size: 2.8rem;
-        line-height: 1.1;
+        font-size: 2.5rem;
+        line-height: 1.05;
+        font-weight: 700;
     }
     
     .section-heading {
-        font-size: 2.2rem;
-        line-height: 1.2;
+        font-size: 2rem;
+        line-height: 1.15;
+        font-weight: 600;
+    }
+    
+    .skill-tag {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.6rem;
     }
     
     .home-description {
