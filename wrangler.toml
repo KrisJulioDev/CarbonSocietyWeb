@@ -1,4 +1,4 @@
-name = "carbon-society-web"
+name = "carbonsociety"
 compatibility_date = "2025-06-25"
 type = "javascript"  # Force no Worker bundling
 
