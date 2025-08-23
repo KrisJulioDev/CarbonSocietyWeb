@@ -160,4 +160,24 @@
   color: #FFFFFF;
   background-color: #4F46E5;
   box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Gallery-specific glare effects */
+.gallery-item.glare-hover {
+  transition: all 0.4s ease;
+}
+
+.gallery-item.glare-hover:hover {
+  transform: rotate(0deg) scale(1.05);
+  text-shadow: none;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item.glare-hover::before {
+  background: linear-gradient(
+    var(--gh-angle, -35deg),
+    transparent 20%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 80%
+  );
 } 

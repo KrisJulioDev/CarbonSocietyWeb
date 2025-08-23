@@ -195,9 +195,26 @@ function initGlareHover() {
         });
     });
 
+    // Initialize glare hover on gallery items
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach((element, index) => {
+        new EnhancedGlareHover(element, {
+            glareColor: "#ffffff",
+            glareOpacity: 0.6,
+            glareAngle: -35,
+            glareSize: 200,
+            transitionDuration: 500,
+            playOnce: false,
+            className: `gallery-glare-${index + 1}`
+        });
+    });
+
     // Initialize on any elements with data-glare attribute
     const glareElements = document.querySelectorAll('[data-glare]');
     glareElements.forEach(element => {
+        // Skip gallery items to avoid double initialization
+        if (element.classList.contains('gallery-item')) return;
+        
         const options = {};
         
         // Parse data attributes

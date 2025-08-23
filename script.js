@@ -425,4 +425,28 @@ function preloadSections() {
 }
 
 // Initialize preloading
-setTimeout(preloadSections, 1000); 
+setTimeout(preloadSections, 1000);
+
+// Project Card Click Handlers for App Store Links
+function initializeProjectCardClicks() {
+    const projectCards = document.querySelectorAll('.project-card[data-app-url]');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Prevent default if clicking on any nested elements
+            e.preventDefault();
+            
+            const appUrl = this.dataset.appUrl;
+            if (appUrl) {
+                // Open App Store link in new tab
+                window.open(appUrl, '_blank', 'noopener,noreferrer');
+            }
+        });
+        
+        // Add visual feedback on hover
+        card.style.cursor = 'pointer';
+    });
+}
+
+// Initialize project card clicks when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeProjectCardClicks); 

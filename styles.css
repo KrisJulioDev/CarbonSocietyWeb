@@ -247,7 +247,7 @@ body {
 
 /* Section Base Styles */
 .section {
-    min-height: 100vh;
+    min-height: 30vh;
     padding: 8rem 4rem;
     position: relative;
     display: block;
@@ -408,12 +408,16 @@ body {
     font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     line-height: 1.1;
     letter-spacing: -0.015em;
-    text-transform: uppercase;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     color: #1a1a1a;
     font-variation-settings: 'wght' 700;
     font-feature-settings: "kern" 1, "liga" 1;
     text-rendering: optimizeLegibility;
+}
+
+/* Specific styling for works section */
+.works-section .section-heading {
+    margin-bottom: 1.5rem;
 }
 
 /* Enhanced Button Typography */
@@ -669,6 +673,149 @@ body {
     transform: rotate(-2deg);
     border: 3px solid #FFFFFF;
 }
+
+/* Glide.js Carousel Styles */
+.glide {
+    padding-top: 50px; 
+    margin: 0 auto;
+    position: relative;
+    overflow: visible;
+    border-radius: 20px;
+}
+
+.glide__track {
+    overflow: visible; 
+    width: 100%;
+    border-radius: 20px;
+}
+
+.glide__slides { 
+    width: 100%;  
+    border-radius: 20px;
+}
+
+.glide__slide { 
+    width: 130%; 
+    display: flow-root;
+    align-items: stretch;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 16;
+    border-radius: 20px;
+    border-color: #292929;
+}
+
+.project-card {  
+    position: relative;
+    background: #85ce26;
+    border: 2px solid #e2e8f0; 
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: visible; 
+    flex-direction: column; 
+    border-color: #000000;
+    border-radius: 20px; 
+}
+
+.project-card:hover {
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    background: #f8edfd;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    border-color: #4F46E5;
+    border-radius: 20px;
+}
+
+.card-content {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1;
+    min-height: 200px; 
+    border-radius: 20px; 
+}
+
+.app-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.app-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+    width: 100%;
+}
+
+.app-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.app-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #64748b;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.4;
+    width: 300px;
+    height: 70%;
+}
+
+.app-year {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Active slide styling */
+.glide__slide.slide-active .project-card {
+    transform: scale(1.02);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); 
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Scrollbar is now hidden - see .carousel-container styles above */
 
 /* Enhanced Works Section Typography */
 .project-title {
@@ -1087,6 +1234,43 @@ body {
         height: 250px;
     }
     
+    /* Glide carousel mobile adjustments */
+    .glide {
+        padding-top: 15px;  
+    }
+    
+    .glide__slides {
+        width: 10%; 
+    }
+    
+    .glide__slide.slide-active .project-card {
+        width: 10%; 
+    }
+    
+    /* Project card mobile adjustments handled by parent containers */
+    
+    .card-content {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .app-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .app-title {
+        font-size: 1.1rem;
+    }
+    
+    .app-description {
+        font-size: 0.9rem;
+    }
+    
+    .app-year {
+        font-size: 0.8rem;
+    }
+    
     .project-tags {
         flex-wrap: wrap;
         gap: 0.5rem;
@@ -1201,6 +1385,39 @@ body {
     
     .hero-image {
         max-width: 240px;
+    }
+    
+    /* Glide carousel mobile adjustments for smaller screens */
+    .glide__slides {
+        width: 30%; 
+    }
+    
+    .glide__slide.slide-active .project-card {
+        width: 30%; 
+    }
+    
+    /* Project card smaller screen adjustments handled by parent containers */
+    
+    .card-content {
+        padding: 1.25rem;
+        gap: 0.75rem;
+    }
+    
+    .app-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .app-title {
+        font-size: 1rem;
+    }
+    
+    .app-description {
+        font-size: 0.85rem;
+    }
+    
+    .app-year {
+        font-size: 0.75rem;
     }
     
     .stacked-image {
