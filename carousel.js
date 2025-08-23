@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const glide = new Glide('#projects-carousel', {
         type: 'carousel',
         perView: 3,
-        gap: 32,
+        gap: 48,
         autoplay: 2000, // Auto-scroll every 2 seconds
         hoverpause: true, // Pause on hover
         animationDuration: 800,
@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
         breakpoints: {
             1200: {
                 perView: 2,
-                gap: 24
+                gap: 32
             },
             768: {
                 perView: 1,
-                gap: 16
+                gap: 24
             },
             480: {
                 perView: 1,
